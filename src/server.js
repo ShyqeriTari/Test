@@ -6,7 +6,7 @@ import proofRouter from "./proof/index.js";
 
 import cors from "cors"
 
-import { errorHandler } from "./errorHandler.js";
+// import { errorHandler } from "./errorHandler.js";
 
 const server = express()
 
@@ -18,7 +18,7 @@ server.use(cors())
 
 server.use("/proof", proofRouter)
 
-server.use(errorHandler)
+// server.use(errorHandler)
 
 console.table(listEndpoints(server))
 

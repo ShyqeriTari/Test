@@ -8,7 +8,7 @@ import {fileURLToPath} from "url"
 
 import { join, dirname } from "path"
 
-import { proofValidation } from "./validation"
+import { proofValidation } from "./validation.js"
 
 const filePath = fileURLToPath(import.meta.url)
 
@@ -20,7 +20,7 @@ const proofRouter = express.Router()
 
 const getProof = () => JSON.parse(fs.readFileSync(JSONpath)) 
 
-const writeProof = content => fs.writeFileSync(JSONpath, JSON.stringify(JSONpath))
+const writeProof = content => fs.writeFileSync(JSONpath, JSON.stringify(content))
 
 proofRouter.post("/", proofValidation, (err, req, res, next) => {
     try {
