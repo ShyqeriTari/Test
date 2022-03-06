@@ -15,6 +15,7 @@ const filePath = fileURLToPath(import.meta.url)
 const directory = dirname(filePath)
 
 const JSONpath = join(directory, "proof.json")
+console.log(JSONpath)
 
 const proofRouter = express.Router()
 
